@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Terms of Service | Athen Labs, LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Terms page specific styles */
+        .terms-header {
+            padding: 120px 0 20px;
+            text-align: center;
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .terms-header h1 {
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+        
+        .app-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .app-category {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .app-category h3 {
+            width: 180px;
+            text-align: right;
+            margin-right: 15px;
+            color: #334155;
+            font-size: 0.95rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .app-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        
+        .app-selector button {
+            padding: 6px 12px;
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            color: #475569;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .app-selector button:hover {
+            background-color: #e2e8f0;
+        }
+        
+        .app-selector button.active {
+            background-color: #334155;
+            color: #f8fafc;
+            border-color: #334155;
+        }
+        
+        .terms-content {
+            padding: 40px 0 60px;
+        }
+        
+        .terms-section {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .terms-section.active {
+            display: block;
+        }
+        
+        .terms-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        
+        .terms-section h3 {
+            margin: 25px 0 15px;
+            color: #334155;
+        }
+        
+        .terms-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #475569;
+        }
+        
+        .terms-section ul, .terms-section ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .terms-section li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+            color: #475569;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .back-to-home a {
+            color: #475569;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+        
+        .back-to-home a i {
+            margin-right: 8px;
+        }
+        
+        .back-to-home a:hover {
+            color: #334155;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Athen Labs</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#professional-agents">Knowledge Worker Agents</a></li>
+                    <li><a href="index.html#job-search-agents">Job Search Agents</a></li>
+                    <li><a href="index.html#mobile-apps">Consumer Apps</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Back to Home link -->
+    <div class="back-to-home" style="margin: 20px auto; text-align: center;">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Terms Header -->
+    <section class="terms-header">
+        <div class="container">
+            <h1>User Terms of Service</h1>
+            <p>Please select an application to view its terms of service</p>
+            
+            <div class="app-categories">
+                <div class="app-category">
+                    <h3>Knowledge Worker Agents</h3>
+                    <div class="app-selector">
+                        <button class="app-btn" data-app="audit-model">Audit My Model</button>
+                        <button class="app-btn" data-app="audit-deck">Audit My Deck</button>
+                        <button class="app-btn" data-app="audit-document">Audit My Document</button>
+                        <button class="app-btn" data-app="excel">Genie For Excel</button>
+                        <button class="app-btn" data-app="powerpoint">Genie For PowerPoint</button>
+                        <button class="app-btn" data-app="word">Genie For Word</button>
+                    </div>
+                </div>
+                
+                <div class="app-category">
+                    <h3>Job Search Agents</h3>
+                    <div class="app-selector">
+                        <button class="app-btn" data-app="linkedin">Quick Cover Letter (LinkedIn)</button>
+                        <button class="app-btn" data-app="indeed">Quick Cover Letter (Indeed)</button>
+                        <button class="app-btn" data-app="handshake">Quick Cover Letter (Handshake)</button>
+                        <button class="app-btn" data-app="hirevue">Hirevue AI</button>
+                    </div>
+                </div>
+                
+                <div class="app-category">
+                    <h3>Consumer Apps</h3>
+                    <div class="app-selector">
+                        <button class="app-btn" data-app="quicknote">Quick Note AI</button>
+                        <button class="app-btn" data-app="photomagic">Photo Magic AI</button>
+                        <button class="app-btn" data-app="tryon">Try On AI</button>
+                        <button class="app-btn" data-app="acesat">Ace SAT</button>
+                    </div>
+                </div>
+                
+                <div class="app-category">
+                    <h3>General</h3>
+                    <div class="app-selector">
+                        <button class="app-btn active" data-app="general">General Terms</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container">
+            <!-- General Terms -->
+            <div class="terms-section active" id="general-terms">
+                <h2>Athen Labs, LLC User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Introduction</h3>
+                <p>Welcome to Athen Labs, LLC. These Terms of Service ("Terms") govern your use of our website, products, and services. By accessing or using any Athen Labs application or service, you agree to be bound by these Terms.</p>
+                
+                <h3>2. Use of Services</h3>
+                <p>Our services are provided for your personal and non-commercial use, unless otherwise specified. You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products, or services obtained from our services without our prior written permission.</p>
+                
+                <h3>3. Privacy Policy</h3>
+                <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information. By using our services, you agree to our Privacy Policy.</p>
+                
+                <h3>4. Modifications to Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page. Your continued use of our services after any such changes constitutes your acceptance of the new Terms.</p>
+                
+                <h3>5. Contact Us</h3>
+                <p>If you have any questions about these Terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Terms%20Inquiry">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Audit My Model Terms -->
+            <div class="terms-section" id="audit-model-terms">
+                <h2>Audit My Model - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Service Description</h3>
+                <p>Audit My Model is designed to analyze and provide feedback on financial models and spreadsheets. The service uses AI to identify potential issues and suggest improvements.</p>
+                
+                <h3>2. Data Usage</h3>
+                <p>When you upload a model for auditing, we process the information to provide our service. We may anonymize certain data for product improvement purposes. Your confidential information will not be shared with third parties without your consent.</p>
+                
+                <h3>3. Limitations</h3>
+                <p>Audit My Model is an assistive tool and does not guarantee the identification of all errors or issues in your models. Users should always verify results and use professional judgment when making financial decisions based on the service's output.</p>
+                
+                <h3>4. Subscription and Billing</h3>
+                <p>Subscription details, including pricing and billing cycles, are provided at the point of purchase. You may cancel your subscription at any time, but refunds are subject to our refund policy.</p>
+                
+                <h3>5. Contact Support</h3>
+                <p>For technical issues or questions about Audit My Model, please contact us at <a href="mailto:hello@athenlabs.com?subject=Audit%20My%20Model%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Audit My Deck Terms -->
+            <div class="terms-section" id="audit-deck-terms">
+                <h2>Audit My Deck - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Service Description</h3>
+                <p>Audit My Deck provides analysis and feedback on presentation decks and slideshows. Our AI-powered service helps identify areas for improvement in structure, content, and visual design.</p>
+                
+                <h3>2. Data Privacy</h3>
+                <p>Your presentations are processed securely to provide feedback. We implement industry-standard security measures to protect your content. We may use anonymized data to improve our algorithms.</p>
+                
+                <h3>3. Service Limitations</h3>
+                <p>While we strive to provide accurate and helpful feedback, Audit My Deck should be used as a supplementary tool. The effectiveness of suggestions may vary based on your specific industry, audience, and presentation goals.</p>
+                
+                <h3>4. Intellectual Property</h3>
+                <p>You retain all rights to the content you submit. Our suggestions and feedback are provided for your use and do not transfer any ownership rights to you for our technology or algorithms.</p>
+                
+                <h3>5. Support</h3>
+                <p>For questions or assistance with Audit My Deck, please contact <a href="mailto:hello@athenlabs.com?subject=Audit%20My%20Deck%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Audit My Document Terms -->
+            <div class="terms-section" id="audit-document-terms">
+                <h2>Audit My Document - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Service Overview</h3>
+                <p>Audit My Document provides AI-powered review and feedback on written documents, including reports, proposals, and agreements. The service aims to improve clarity, structure, and effectiveness of your documents.</p>
+                
+                <h3>2. Document Processing</h3>
+                <p>Documents uploaded to our service are processed securely. We do not claim ownership of your content, and your documents are not shared with third parties without your explicit permission.</p>
+                
+                <h3>3. Usage Restrictions</h3>
+                <p>You may not use Audit My Document for any illegal purposes or to process content that violates our acceptable use policy, including but not limited to content that is defamatory, infringing, or harmful.</p>
+                
+                <h3>4. Service Availability</h3>
+                <p>While we strive to maintain high availability, we do not guarantee uninterrupted access to the service. Maintenance, updates, or technical issues may temporarily affect availability.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For support with Audit My Document, please email <a href="mailto:hello@athenlabs.com?subject=Audit%20My%20Document%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Genie For Excel Terms -->
+            <div class="terms-section" id="excel-terms">
+                <h2>Genie For Excel - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Add-in Description</h3>
+                <p>Genie For Excel is an add-in that enhances Microsoft Excel with AI-powered capabilities. The add-in helps users create formulas, analyze data, and automate spreadsheet tasks.</p>
+                
+                <h3>2. Microsoft Integration</h3>
+                <p>Genie For Excel integrates with Microsoft Excel. Your use of Microsoft products is governed by Microsoft's own terms of service. We are not affiliated with Microsoft Corporation.</p>
+                
+                <h3>3. Data Processing</h3>
+                <p>The add-in processes your spreadsheet data to provide its functionality. We employ security measures to protect your data, but you should not use the add-in for highly sensitive or regulated information unless you have verified our compliance with your specific regulatory requirements.</p>
+                
+                <h3>4. Subscription Terms</h3>
+                <p>Subscription details are provided at sign-up. You may be offered a free trial before subscription charges begin. Cancellations take effect at the end of your current billing period.</p>
+                
+                <h3>5. Support and Feedback</h3>
+                <p>For technical support or to provide feedback, please contact <a href="mailto:hello@athenlabs.com?subject=Genie%20For%20Excel%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Genie For Word Terms -->
+            <div class="terms-section" id="word-terms">
+                <h2>Genie For Word - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Add-in Description</h3>
+                <p>Genie For Word is an AI-powered add-in for Microsoft Word that assists with writing, editing, and formatting documents. The add-in offers suggestions to improve clarity, grammar, style, and overall document quality.</p>
+                
+                <h3>2. Microsoft Integration</h3>
+                <p>As a Microsoft Word add-in, Genie For Word operates within the Microsoft ecosystem. Your use of Microsoft products is subject to Microsoft's terms. We are an independent developer and not affiliated with Microsoft Corporation.</p>
+                
+                <h3>3. Privacy Considerations</h3>
+                <p>To provide suggestions, the add-in processes text from your documents. We implement appropriate security measures, but you should avoid using the add-in with confidential information that requires specialized handling under regulations such as HIPAA, unless we have explicitly stated compliance with such regulations.</p>
+                
+                <h3>4. Licensing</h3>
+                <p>Your license to use Genie For Word may be subscription-based or perpetual, depending on your purchase. License details are provided at the time of purchase or subscription.</p>
+                
+                <h3>5. Technical Support</h3>
+                <p>For assistance with Genie For Word, please contact our support team at <a href="mailto:hello@athenlabs.com?subject=Genie%20For%20Word%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Quick Note AI Terms -->
+            <div class="terms-section" id="quicknote-terms">
+                <h2>Quick Note AI - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. App Description</h3>
+                <p>Quick Note AI is a mobile application that helps users capture, organize, and enhance notes using artificial intelligence. The app includes features for transcription, summarization, and note organization.</p>
+                
+                <h3>2. Mobile Platform Terms</h3>
+                <p>In addition to these terms, your use of Quick Note AI is subject to the terms of service of the platform where you downloaded the app (App Store or Google Play). Each platform may have additional requirements or restrictions.</p>
+                
+                <h3>3. Voice Recording</h3>
+                <p>Some features of Quick Note AI involve recording audio. You are responsible for obtaining consent from all parties before recording conversations, in accordance with applicable laws in your jurisdiction.</p>
+                
+                <h3>4. Data Synchronization</h3>
+                <p>Notes may be synchronized across devices using your account. While we employ encryption and security measures, you should avoid storing highly sensitive information unless you have reviewed and are satisfied with our security practices.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For support with Quick Note AI, please contact <a href="mailto:hello@athenlabs.com?subject=Quick%20Note%20AI%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+
+            <!-- Genie For PowerPoint Terms -->
+            <div class="terms-section" id="powerpoint-terms">
+                <h2>Genie For PowerPoint - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Add-in Description</h3>
+                <p>Genie For PowerPoint is an add-in for Microsoft PowerPoint that helps users create professional presentations with perfect flow and smart layouts.</p>
+                
+                <h3>2. License and Usage</h3>
+                <p>Users are granted a limited, non-exclusive license to use Genie For PowerPoint in accordance with these terms. This license does not transfer ownership of the software.</p>
+                
+                <h3>3. Data Privacy</h3>
+                <p>We respect your privacy and protect your personal information. For more details on our data practices, please refer to our Privacy Policy.</p>
+                
+                <h3>4. Microsoft Integration</h3>
+                <p>As a Microsoft PowerPoint add-in, Genie For PowerPoint operates within the Microsoft ecosystem. Your use of Microsoft products is subject to Microsoft's terms. We are an independent developer and not affiliated with Microsoft Corporation.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For questions regarding these terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Genie%20For%20PowerPoint%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+
+            <!-- Quick Cover Letter (LinkedIn) Terms -->
+            <div class="terms-section" id="linkedin-terms">
+                <h2>Quick Cover Letter (LinkedIn) - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Extension Description</h3>
+                <p>Quick Cover Letter (LinkedIn) is a Chrome extension that helps users generate tailored cover letters for LinkedIn job applications by matching their profile with job requirements.</p>
+                
+                <h3>2. User Data</h3>
+                <p>This extension processes information from your LinkedIn profile and job listings to generate cover letters. We do not store this information permanently.</p>
+                
+                <h3>3. Usage Restrictions</h3>
+                <p>Users may not reverse engineer, decompile, or attempt to extract the source code of the extension. The extension may only be used for legitimate job application purposes.</p>
+                
+                <h3>4. Third-Party Integration</h3>
+                <p>Our extension interacts with LinkedIn's website. We are not affiliated with LinkedIn Corporation. Your use of LinkedIn is subject to LinkedIn's own terms of service.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For questions regarding these terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Quick%20Cover%20Letter%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+
+            <!-- Quick Cover Letter (Indeed) Terms -->
+            <div class="terms-section" id="indeed-terms">
+                <h2>Quick Cover Letter (Indeed) - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Extension Description</h3>
+                <p>Quick Cover Letter (Indeed) is a Chrome extension that helps users create personalized cover letters for Indeed job listings that highlight relevant experience and skills.</p>
+                
+                <h3>2. User Data</h3>
+                <p>This extension processes information from Indeed job listings and user-provided information to generate cover letters. We respect your privacy and protect your personal information.</p>
+                
+                <h3>3. Usage Restrictions</h3>
+                <p>Users may not use the extension to submit false or misleading information in job applications. The extension is intended to assist in legitimate job seeking activities only.</p>
+                
+                <h3>4. Third-Party Integration</h3>
+                <p>Our extension interacts with Indeed's website. We are not affiliated with Indeed, Inc. Your use of Indeed is subject to Indeed's own terms of service.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For questions regarding these terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Quick%20Cover%20Letter%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+
+            <!-- Quick Cover Letter (Handshake) Terms -->
+            <div class="terms-section" id="handshake-terms">
+                <h2>Quick Cover Letter (Handshake) - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Extension Description</h3>
+                <p>Quick Cover Letter (Handshake) is a student-focused cover letter generator for Handshake opportunities, designed specifically for internships and entry-level positions.</p>
+                
+                <h3>2. User Eligibility</h3>
+                <p>This extension is intended for use by students and recent graduates who are eligible to use the Handshake platform. Users must comply with Handshake's terms of service.</p>
+                
+                <h3>3. Privacy Practices</h3>
+                <p>We collect minimal data necessary to provide our services. For more information about how we handle your data, please refer to our Privacy Policy.</p>
+                
+                <h3>4. Third-Party Integration</h3>
+                <p>This extension interacts with Handshake's website. We are not affiliated with Handshake. Your use of Handshake is subject to their own terms of service.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For questions regarding these terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Quick%20Cover%20Letter%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+
+            <!-- Hirevue AI Terms -->
+            <div class="terms-section" id="hirevue-terms">
+                <h2>Hirevue AI - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Service Description</h3>
+                <p>Hirevue AI is a Chrome extension that helps users practice and prepare for Hirevue video interviews with AI-powered feedback on responses and presentation.</p>
+                
+                <h3>2. Content Usage</h3>
+                <p>The feedback provided by Hirevue AI is for practice purposes only. We do not guarantee that using our service will result in successful interview outcomes.</p>
+                
+                <h3>3. Video and Audio Data</h3>
+                <p>By using Hirevue AI, you consent to the processing of your video and audio data for the purpose of providing interview feedback. This data is processed in accordance with our Privacy Policy.</p>
+                
+                <h3>4. Third-Party Integration</h3>
+                <p>Our extension interacts with Hirevue's platform. We are not affiliated with Hirevue, Inc. Your use of Hirevue is subject to Hirevue's own terms of service.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For questions regarding these terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Hirevue%20AI%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Photo Magic AI Terms -->
+            <div class="terms-section" id="photomagic-terms">
+                <h2>Photo Magic AI - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. App Description</h3>
+                <p>Photo Magic AI is an iOS application that uses artificial intelligence to enhance and transform your photos with advanced editing capabilities.</p>
+                
+                <h3>2. User Content</h3>
+                <p>Users retain ownership of all photos uploaded to or edited with Photo Magic AI. We do not claim any ownership rights to your content.</p>
+                
+                <h3>3. Data Processing</h3>
+                <p>Photos may be processed on our servers to apply AI enhancements. We implement appropriate security measures to protect your content during processing.</p>
+                
+                <h3>4. App Store Terms</h3>
+                <p>Your use of Photo Magic AI is also subject to the terms of service provided by the App Store. We are not affiliated with Apple Inc.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For support with Photo Magic AI, please contact <a href="mailto:hello@athenlabs.com?subject=Photo%20Magic%20AI%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Try On AI Terms -->
+            <div class="terms-section" id="tryon-terms">
+                <h2>Try On AI - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Service Overview</h3>
+                <p>Try On AI is a virtual clothing try-on application that uses artificial intelligence to help users visualize how clothing items would look on them before making a purchase.</p>
+                
+                <h3>2. User Images</h3>
+                <p>When you upload images of yourself to use the virtual try-on feature, we process these images solely for the purpose of providing the try-on service. We do not sell or share your images with third parties.</p>
+                
+                <h3>3. Shopping Integration</h3>
+                <p>Try On AI may integrate with third-party shopping platforms. Any purchases made through these integrations are subject to the terms and conditions of the respective retailers.</p>
+                
+                <h3>4. App Limitations</h3>
+                <p>While we strive for accuracy, Try On AI provides a simulation that may not perfectly represent how clothing will actually look or fit in person. Users should consider this when making purchasing decisions.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For questions about Try On AI, please contact us at <a href="mailto:hello@athenlabs.com?subject=Try%20On%20AI%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Ace SAT Terms -->
+            <div class="terms-section" id="acesat-terms">
+                <h2>Ace SAT - User Terms of Service</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Educational Purpose</h3>
+                <p>Ace SAT is an educational application designed to help students prepare for the SAT exam through practice questions, study guides, and performance tracking.</p>
+                
+                <h3>2. Content Accuracy</h3>
+                <p>While we strive to provide accurate and up-to-date content, we do not guarantee that all information in the app is error-free or reflects the most current SAT format and questions.</p>
+                
+                <h3>3. User Accounts</h3>
+                <p>To track progress and provide personalized learning experiences, users may need to create an account. Users are responsible for maintaining the confidentiality of their account credentials.</p>
+                
+                <h3>4. Educational Results</h3>
+                <p>Use of Ace SAT does not guarantee improved performance on the actual SAT exam. Results vary based on individual effort, preparation time, and other factors.</p>
+                
+                <h3>5. Contact Information</h3>
+                <p>For support with Ace SAT, please contact <a href="mailto:hello@athenlabs.com?subject=Ace%20SAT%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Athen Labs, LLC</h2>
+                    <p>56 Broad Street, STE 14022<br>Boston, MA 02109<br>United States</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="mailto:hello@athenlabs.com?subject=Contact%20Inquiry">Contact</a></li>
+                        <li><a href="mailto:hello@athenlabs.com?subject=Career%20Inquiry">Careers</a></li>
+                        <li><a href="mailto:hello@athenlabs.com?subject=Support%20Request">Support</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Athen Labs, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for tab switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const appButtons = document.querySelectorAll('.app-btn');
+            const termsSections = document.querySelectorAll('.terms-section');
+            
+            // Set initial active state for the default button
+            document.querySelector('.app-btn[data-app="general"]').classList.add('active');
+            document.getElementById('general-terms').classList.add('active');
+            
+            appButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    appButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Hide all terms sections
+                    termsSections.forEach(section => section.classList.remove('active'));
+                    
+                    // Show selected terms section
+                    const app = this.getAttribute('data-app');
+                    let sectionId;
+                    
+                    switch(app) {
+                        case 'general':
+                            sectionId = 'general-terms';
+                            break;
+                        case 'audit-model':
+                            sectionId = 'audit-model-terms';
+                            break;
+                        case 'audit-deck':
+                            sectionId = 'audit-deck-terms';
+                            break;
+                        case 'audit-document':
+                            sectionId = 'audit-document-terms';
+                            break;
+                        case 'excel':
+                            sectionId = 'excel-terms';
+                            break;
+                        case 'powerpoint':
+                            sectionId = 'powerpoint-terms';
+                            break;
+                        case 'word':
+                            sectionId = 'word-terms';
+                            break;
+                        case 'linkedin':
+                            sectionId = 'linkedin-terms';
+                            break;
+                        case 'indeed':
+                            sectionId = 'indeed-terms';
+                            break;
+                        case 'handshake':
+                            sectionId = 'handshake-terms';
+                            break;
+                        case 'hirevue':
+                            sectionId = 'hirevue-terms';
+                            break;
+                        case 'quicknote':
+                            sectionId = 'quicknote-terms';
+                            break;
+                        case 'photomagic':
+                            sectionId = 'photomagic-terms';
+                            break;
+                        case 'tryon':
+                            sectionId = 'tryon-terms';
+                            break;
+                        case 'acesat':
+                            sectionId = 'acesat-terms';
+                            break;
+                    }
+                    
+                    document.getElementById(sectionId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

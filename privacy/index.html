@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Athen Labs, LLC</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Privacy page specific styles */
+        .privacy-header {
+            padding: 120px 0 20px;
+            text-align: center;
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .privacy-header h1 {
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+        
+        .app-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .app-category {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+        
+        .app-category h3 {
+            width: 180px;
+            text-align: right;
+            margin-right: 15px;
+            color: #334155;
+            font-size: 0.95rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .app-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        
+        .app-selector button {
+            padding: 6px 12px;
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            color: #475569;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .app-selector button:hover {
+            background-color: #e2e8f0;
+        }
+        
+        .app-selector button.active {
+            background-color: #334155;
+            color: #f8fafc;
+            border-color: #334155;
+        }
+        
+        .privacy-content {
+            padding: 40px 0 60px;
+        }
+        
+        .privacy-section {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .privacy-section.active {
+            display: block;
+        }
+        
+        .privacy-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        
+        .privacy-section h3 {
+            margin: 25px 0 15px;
+            color: #334155;
+        }
+        
+        .privacy-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #475569;
+        }
+        
+        .privacy-section ul, .privacy-section ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+            color: #475569;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .back-to-home a {
+            color: #475569;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+        
+        .back-to-home a i {
+            margin-right: 8px;
+        }
+        
+        .back-to-home a:hover {
+            color: #334155;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Athen Labs</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#professional-agents">Productivity Agents</a></li>
+                    <li><a href="../index.html#job-search-agents">Job Search Agents</a></li>
+                    <li><a href="../index.html#mobile-apps">Consumer Apps</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Back to Home link -->
+    <div class="back-to-home" style="margin: 20px auto; text-align: center;">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Privacy Header -->
+    <section class="privacy-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Please select an application to view its privacy policy</p>
+            
+            <div class="app-categories">
+                <div class="app-category">
+                    <h3>General</h3>
+                    <div class="app-selector">
+                        <button class="app-btn active" data-app="general">General Privacy Policy</button>
+                    </div>
+                </div>
+                
+                <div class="app-category">
+                    <h3>Productivity Agents</h3>
+                    <div class="app-selector">
+                        <button class="app-btn" data-app="audit-model">Audit My Model</button>
+                        <button class="app-btn" data-app="audit-deck">Audit My Deck</button>
+                        <button class="app-btn" data-app="audit-document">Audit My Document</button>
+                        <button class="app-btn" data-app="excel">Genie For Excel</button>
+                        <button class="app-btn" data-app="powerpoint">Genie For PowerPoint</button>
+                        <button class="app-btn" data-app="word">Genie For Word</button>
+                    </div>
+                </div>
+                
+                <div class="app-category">
+                    <h3>Job Search Agents</h3>
+                    <div class="app-selector">
+                        <button class="app-btn" data-app="linkedin">Quick Cover Letter (LinkedIn)</button>
+                        <button class="app-btn" data-app="indeed">Quick Cover Letter (Indeed)</button>
+                        <button class="app-btn" data-app="handshake">Quick Cover Letter (Handshake)</button>
+                        <button class="app-btn" data-app="hirevue">Hirevue AI</button>
+                    </div>
+                </div>
+                
+                <div class="app-category">
+                    <h3>Consumer Apps</h3>
+                    <div class="app-selector">
+                        <button class="app-btn" data-app="quicknote">Quick Note AI</button>
+                        <button class="app-btn" data-app="photomagic">Photo Magic AI</button>
+                        <button class="app-btn" data-app="tryon">Try On AI</button>
+                        <button class="app-btn" data-app="acesat">Ace SAT</button>
+                        <button class="app-btn" data-app="aceact">Ace ACT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content">
+        <div class="container">
+            <!-- General Privacy Policy -->
+            <div class="privacy-section active" id="general-privacy">
+                <h2>Athen Labs, LLC Privacy Policy</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Introduction</h3>
+                <p>At Athen Labs, LLC, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, products, and services.</p>
+                
+                <h3>2. Information Collection</h3>
+                <p>We may collect personal information that you voluntarily provide to us when using our services, including but not limited to your name, email address, and usage data. We may also collect non-personal information about how you interact with our services.</p>
+                
+                <h3>3. Use of Information</h3>
+                <p>We use the information we collect to provide, maintain, and improve our services, to communicate with you, and to comply with legal obligations. We may also use anonymized data for research and analytics purposes.</p>
+                
+                <h3>4. Information Sharing</h3>
+                <p>We do not sell, rent, or trade your personal information to third parties. We may share your information with service providers who assist us in operating our business, as required by law, or with your consent.</p>
+                
+                <h3>5. Data Security</h3>
+                <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+                
+                <h3>6. Changes to Privacy Policy</h3>
+                <p>We reserve the right to modify this Privacy Policy at any time. We will notify you of any changes by posting the new Privacy Policy on this page. Your continued use of our services after any such changes constitutes your acceptance of the new Privacy Policy.</p>
+                
+                <h3>7. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:hello@athenlabs.com?subject=Privacy%20Policy%20Inquiry">hello@athenlabs.com</a>.</p>
+            </div>
+            
+            <!-- Audit My Model Privacy -->
+            <div class="privacy-section" id="audit-model-privacy">
+                <h2>Audit My Model - Privacy Policy</h2>
+                <p>Last Updated: March 15, 2025</p>
+                
+                <h3>1. Data Collection</h3>
+                <p>When you use Audit My Model, we collect information related to the financial models and spreadsheets you upload for analysis. This may include financial data, formulas, and other content contained within your files.</p>
+                
+                <h3>2. Use of Your Data</h3>
+                <p>We use the data you provide solely for the purpose of analyzing your model and providing feedback. Your data is processed using our AI systems to identify potential issues and suggest improvements.</p>
+                
+                <h3>3. Data Retention</h3>
+                <p>We retain your uploaded files only for the time necessary to process your request. Files are automatically deleted from our servers after processing unless you have explicitly opted to save your analysis.</p>
+            </div>
+            
+            <!-- Additional app-specific privacy policies would go here -->
+            
+        </div>
+    </section>
+
+    <!-- JavaScript for the app selector functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all app buttons and sections
+            const appButtons = document.querySelectorAll('.app-btn');
+            const privacySections = document.querySelectorAll('.privacy-section');
+            
+            // Check URL parameters for direct app selection
+            const urlParams = new URLSearchParams(window.location.search);
+            const appParam = urlParams.get('app');
+            
+            if (appParam) {
+                // Find the button for the specified app
+                const targetButton = document.querySelector(`.app-btn[data-app="${appParam}"]`);
+                if (targetButton) {
+                    // Simulate a click on that button
+                    simulateButtonClick(targetButton);
+                } else {
+                    // Default to general privacy if button not found
+                    const generalButton = document.querySelector(`.app-btn[data-app="general"]`);
+                    simulateButtonClick(generalButton);
+                }
+            } else {
+                // Default to general privacy if no app parameter
+                const generalButton = document.querySelector(`.app-btn[data-app="general"]`);
+                simulateButtonClick(generalButton);
+            }
+            
+            // Add click event listener to all app buttons
+            appButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    appButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Hide all privacy sections
+                    privacySections.forEach(section => section.classList.remove('active'));
+                    
+                    // Show the selected privacy section
+                    const appName = this.getAttribute('data-app');
+                    const targetSection = document.getElementById(`${appName}-privacy`);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    } else {
+                        // If specific section doesn't exist, show general privacy
+                        document.getElementById('general-privacy').classList.add('active');
+                    }
+                    
+                    // Update URL parameter without refreshing
+                    const newUrl = window.location.pathname + `?app=${appName}`;
+                    history.pushState({}, '', newUrl);
+                });
+            });
+            
+            function simulateButtonClick(button) {
+                // Remove active class from all buttons
+                appButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to target button
+                button.classList.add('active');
+                
+                // Hide all privacy sections
+                privacySections.forEach(section => section.classList.remove('active'));
+                
+                // Show the selected privacy section
+                const appName = button.getAttribute('data-app');
+                const targetSection = document.getElementById(`${appName}-privacy`);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                } else {
+                    // If specific section doesn't exist, show general privacy
+                    document.getElementById('general-privacy').classList.add('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
