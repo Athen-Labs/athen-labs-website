@@ -12,13 +12,13 @@
         .privacy-header {
             padding: 120px 0 20px;
             text-align: center;
-            background-color: #f8fafc;
-            border-bottom: 1px solid #e2e8f0;
+            background-color: var(--color-bg-primary);
+            border-bottom: 1px solid var(--color-border);
         }
         
         .privacy-header h1 {
             margin-bottom: 20px;
-            color: #1e293b;
+            color: var(--color-text-accent);
         }
         
         .app-categories {
@@ -41,7 +41,7 @@
             width: 180px;
             text-align: right;
             margin-right: 15px;
-            color: #334155;
+            color: var(--color-text-primary);
             font-size: 0.95rem;
             font-weight: 600;
             flex-shrink: 0;
@@ -56,22 +56,23 @@
         
         .app-selector button {
             padding: 6px 12px;
-            background-color: #f1f5f9;
-            border: 1px solid #e2e8f0;
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
             border-radius: 4px;
-            color: #475569;
+            color: var(--color-text-secondary);
             font-size: 0.9rem;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
         
         .app-selector button:hover {
-            background-color: #e2e8f0;
+            background-color: var(--color-bg-accent);
         }
         
         .app-selector button.active {
-            background-color: #334155;
-            color: #f8fafc;
-            border-color: #334155;
+            background-color: var(--color-button-bg);
+            color: var(--color-button-text);
+            border-color: var(--color-button-bg);
         }
         
         .privacy-content {
@@ -91,19 +92,19 @@
         .privacy-section h2 {
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #e2e8f0;
-            color: #1e293b;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-accent);
         }
         
         .privacy-section h3 {
             margin: 25px 0 15px;
-            color: #334155;
+            color: var(--color-text-primary);
         }
         
         .privacy-section p {
             margin-bottom: 15px;
             line-height: 1.6;
-            color: #475569;
+            color: var(--color-text-secondary);
         }
         
         .privacy-section ul, .privacy-section ol {
@@ -114,7 +115,7 @@
         .privacy-section li {
             margin-bottom: 10px;
             line-height: 1.5;
-            color: #475569;
+            color: var(--color-text-secondary);
         }
         
         .back-to-home {
@@ -123,7 +124,7 @@
         }
         
         .back-to-home a {
-            color: #475569;
+            color: var(--color-text-secondary);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -188,24 +189,17 @@
                     </div>
                 </div>
                 
-                <div class="app-category">
-                    <h3>Job Search Agents</h3>
-                    <div class="app-selector">
-                        <button class="app-btn" data-app="linkedin">Quick Cover Letter (LinkedIn)</button>
-                        <button class="app-btn" data-app="indeed">Quick Cover Letter (Indeed)</button>
-                        <button class="app-btn" data-app="handshake">Quick Cover Letter (Handshake)</button>
-                        <button class="app-btn" data-app="hirevue">Hirevue AI</button>
-                    </div>
-                </div>
+
                 
                 <div class="app-category">
                     <h3>Consumer Apps</h3>
                     <div class="app-selector">
                         <button class="app-btn" data-app="quicknote">Quick Note AI</button>
-                        <button class="app-btn" data-app="photomagic">Photo Magic AI</button>
-                        <button class="app-btn" data-app="tryon">Try On AI</button>
                         <button class="app-btn" data-app="acesat">Ace SAT</button>
                         <button class="app-btn" data-app="aceact">Ace ACT</button>
+                        <button class="app-btn" data-app="acepsat">Ace PSAT</button>
+                        <button class="app-btn" data-app="acepreact">Ace PreACT</button>
+                        <button class="app-btn" data-app="handshake">Quick Cover Letter for Handshake</button>
                     </div>
                 </div>
             </div>
@@ -218,7 +212,7 @@
             <!-- General Privacy Policy -->
             <div class="privacy-section active" id="general-privacy">
                 <h2>Athen Labs, LLC Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Introduction</h3>
                 <p>At Athen Labs, LLC, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, products, and services.</p>
@@ -254,7 +248,7 @@
             <!-- Audit My Model Privacy -->
             <div class="privacy-section" id="audit-model-privacy">
                 <h2>Audit My Model - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Collection</h3>
                 <p>When you use Audit My Model, we collect and process information from the files you upload for analysis. This includes extracting object models and content from your financial models and spreadsheets to apply our AI analysis.</p>
@@ -278,7 +272,7 @@
             <!-- Audit My Deck Privacy -->
             <div class="privacy-section" id="audit-deck-privacy">
                 <h2>Audit My Deck - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Collection</h3>
                 <p>When you use Audit My Deck, we collect and process information from the PowerPoint or presentation files you upload for analysis. This includes extracting object models and content from your presentations to apply our AI analysis.</p>
@@ -302,7 +296,7 @@
             <!-- Audit My Document Privacy -->
             <div class="privacy-section" id="audit-document-privacy">
                 <h2>Audit My Document - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Collection</h3>
                 <p>When you use Audit My Document, we collect and process information from the Word or document files you upload for analysis. This includes extracting object models and content from your documents to apply our AI analysis.</p>
@@ -326,7 +320,7 @@
             <!-- Genie For Excel Privacy -->
             <div class="privacy-section" id="excel-privacy">
                 <h2>Genie For Excel - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Processing</h3>
                 <p>Genie For Excel is a desktop application that allows you to connect to and interact with your Excel files. When you use the application, your Excel file is extracted and analyzed to enable AI-powered interactions, but neither the file nor its components are stored by us.</p>
@@ -350,7 +344,7 @@
             <!-- Genie For PowerPoint Privacy -->
             <div class="privacy-section" id="powerpoint-privacy">
                 <h2>Genie For PowerPoint - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Processing</h3>
                 <p>Genie For PowerPoint is a desktop application that allows you to connect to and interact with your PowerPoint files. When you use the application, your PowerPoint file is extracted and analyzed to enable AI-powered interactions, but neither the file nor its components are stored by us.</p>
@@ -374,7 +368,7 @@
             <!-- Genie For Word Privacy -->
             <div class="privacy-section" id="word-privacy">
                 <h2>Genie For Word - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Processing</h3>
                 <p>Genie For Word is a desktop application that allows you to connect to and interact with your Word files. When you use the application, your Word file is extracted and analyzed to enable AI-powered interactions, but neither the file nor its components are stored by us.</p>
@@ -395,58 +389,12 @@
                 <p>Users are responsible for ensuring they do not expose sensitive data to the system. While we do not store your data, you should be comfortable with it being temporarily processed by our AI providers. We recommend not including sensitive or confidential information in files you connect to the application.</p>
             </div>
             
-            <!-- Quick Cover Letter (LinkedIn) Privacy -->
-            <div class="privacy-section" id="linkedin-privacy">
-                <h2>Quick Cover Letter (LinkedIn) - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
-                
-                <h3>1. Data Collection</h3>
-                <p>Quick Cover Letter (LinkedIn) is a Chrome extension that extracts information from LinkedIn job listings, including role details and job descriptions. The extension also collects personal information you provide to generate tailored cover letters.</p>
-                
-                <h3>2. Extension Permissions</h3>
-                <p>Our Chrome extension requires permission to access and read content on LinkedIn job pages. This access is used solely to extract job details necessary for generating appropriate cover letters.</p>
-                
-                <h3>3. Account Information</h3>
-                <p>We collect and store your account information including login credentials, name, email, and billing details. This information is necessary to provide you with access to our services and is securely processed and stored.</p>
-                
-                <h3>4. Data Storage</h3>
-                <p>We store the job information extracted from LinkedIn, your personal information provided for context, and the generated cover letters to maintain your history and allow you to review past applications. This data is stored securely on our servers.</p>
-                
-                <h3>5. Data Deletion</h3>
-                <p>You can view your history of generated cover letters and delete any or all entries at any time through your account settings. When you delete an entry, all associated job information and generated content is permanently removed from our systems.</p>
-                
-                <h3>6. Third-Party Processing</h3>
-                <p>The information collected is processed by our AI systems to generate cover letters. We implement appropriate security measures to protect your data during this process.</p>
-            </div>
-            
-            <!-- Quick Cover Letter (Indeed) Privacy -->
-            <div class="privacy-section" id="indeed-privacy">
-                <h2>Quick Cover Letter (Indeed) - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
-                
-                <h3>1. Data Collection</h3>
-                <p>Quick Cover Letter (Indeed) is a Chrome extension that extracts information from Indeed job listings, including role details and job descriptions. The extension also collects personal information you provide to generate tailored cover letters.</p>
-                
-                <h3>2. Extension Permissions</h3>
-                <p>Our Chrome extension requires permission to access and read content on Indeed job pages. This access is used solely to extract job details necessary for generating appropriate cover letters.</p>
-                
-                <h3>3. Account Information</h3>
-                <p>We collect and store your account information including login credentials, name, email, and billing details. This information is necessary to provide you with access to our services and is securely processed and stored.</p>
-                
-                <h3>4. Data Storage</h3>
-                <p>We store the job information extracted from Indeed, your personal information provided for context, and the generated cover letters to maintain your history and allow you to review past applications. This data is stored securely on our servers.</p>
-                
-                <h3>5. Data Deletion</h3>
-                <p>You can view your history of generated cover letters and delete any or all entries at any time through your account settings. When you delete an entry, all associated job information and generated content is permanently removed from our systems.</p>
-                
-                <h3>6. Third-Party Processing</h3>
-                <p>The information collected is processed by our AI systems to generate cover letters. We implement appropriate security measures to protect your data during this process.</p>
-            </div>
+
             
             <!-- Quick Cover Letter (Handshake) Privacy -->
             <div class="privacy-section" id="handshake-privacy">
                 <h2>Quick Cover Letter (Handshake) - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Data Collection</h3>
                 <p>Quick Cover Letter (Handshake) is a Chrome extension that extracts information from Handshake job listings, including role details and job descriptions. The extension also collects personal information you provide to generate tailored cover letters.</p>
@@ -468,44 +416,12 @@
             </div>
             
             <!-- Hirevue AI Privacy -->
-            <div class="privacy-section" id="hirevue-privacy">
-                <h2>Hirevue AI - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
-                
-                <h3>1. Extension Functionality</h3>
-                <p>Hirevue AI is a Chrome extension designed to assist you during Hirevue interviews. The extension captures your screen content (including your camera feed displayed on screen), records your voice via microphone, and processes this information in real-time to provide interview recommendations.</p>
-                
-                <h3>2. Account Information</h3>
-                <p>We collect and store your account information including login credentials, name, email, and billing details. This information is necessary to provide you with access to our services and is securely processed and stored.</p>
-                
-                <h3>3. Data Collection</h3>
-                <p>When you use Hirevue AI, we collect the following information during your interview sessions:</p>
-                <ul>
-                    <li>Screen content from the browser tab where your Hirevue interview is taking place</li>
-                    <li>Audio from your microphone capturing your spoken responses</li>
-                    <li>Visual information from your camera as displayed on your screen</li>
-                </ul>
-                
-                <h3>4. Real-Time Processing</h3>
-                <p>All audio and visual information is processed in real-time through our AI providers to generate helpful recommendations for your interview responses. This processing happens as you speak, allowing for immediate feedback.</p>
-                
-                <h3>5. No Data Storage</h3>
-                <p>We do not store your screen recordings, video footage, or audio recordings. This information is only processed in real-time to provide the service and is not retained after processing.</p>
-                
-                <h3>6. Extension Permissions</h3>
-                <p>The Hirevue AI extension requires permissions to access your screen content, camera (through screen capture), and microphone. These permissions are essential for the functionality of the service and are only used during active interview sessions.</p>
-                
-                <h3>7. User Control</h3>
-                <p>You have full control over when the extension is active. You can disable or remove the extension at any time through your browser settings.</p>
-                
-                <h3>8. Third-Party Processing</h3>
-                <p>The audio and visual information captured is processed through our AI providers. While we do not store this information, it is temporarily processed by these third-party systems to provide real-time recommendations.</p>
-            </div>
+
             
             <!-- Quick Note AI Privacy -->
             <div class="privacy-section" id="quicknote-privacy">
                 <h2>Quick Note AI - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Audio Recording</h3>
                 <p>Quick Note AI allows you to record audio through your device's microphone for meetings, lectures, and other events. You control when to start and stop recording, and all recordings are initially stored locally on your device.</p>
@@ -535,73 +451,18 @@
                 <p>Our AI systems may make mistakes in transcriptions or summaries. The accuracy of transcription depends on various factors, including audio quality, background noise, speaker clarity, and technical limitations of AI systems.</p>
             </div>
             
-            <!-- Photo Magic AI Privacy -->
-            <div class="privacy-section" id="photomagic-privacy">
-                <h2>Photo Magic AI - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
-                
-                <h3>1. Image Processing</h3>
-                <p>Photo Magic AI allows you to upload images along with prompts to transform your images using AI. When you use this service, your images and prompts are sent to our AI providers for processing.</p>
-                
-                <h3>2. No Image Storage</h3>
-                <p>We do not store your original or transformed images on our servers. After processing, the transformed images are returned to your device where you can choose to save, share, or further edit them locally.</p>
-                
-                <h3>3. Third-Party AI Processing</h3>
-                <p>Your images and prompts are processed by our AI provider partners. While these providers process your content to apply transformations, they do not store your images after processing is complete.</p>
-                
-                <h3>4. User Responsibility</h3>
-                <p>You are responsible for the content of the images you upload and the transformations you request. We recommend not using the service for images containing sensitive or personal information, as they will be processed by third-party AI systems.</p>
-                
-                <h3>5. Local Storage</h3>
-                <p>All transformed images are returned to and stored locally on your device. We do not maintain any copies of your images on our servers. Any saving, sharing, or further editing of these images is managed entirely by you on your device.</p>
-                
-                <h3>6. Payment Processing</h3>
-                <p>Photo Magic AI is available on iOS devices. All payments and subscriptions are processed through the Apple App Store. We do not collect, process, or store your payment information. Subscription management, including cancellations and refunds, must be done through your Apple App Store account settings.</p>
-                
-                <h3>7. No Account Creation</h3>
-                <p>Photo Magic AI does not require you to create an account. All app data is stored locally on your device. If you wish to stop using the service, you can simply delete the app from your device. No additional termination process is required as we do not maintain user accounts or store your data on our servers.</p>
-            </div>
-            
-            <!-- Try On AI Privacy -->
-            <div class="privacy-section" id="tryon-privacy">
-                <h2>Try On AI - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
-                
-                <h3>1. Image Processing</h3>
-                <p>Try On AI allows you to upload images of yourself to visualize how different clothing items would look on you. When you use this service, your images are sent to our AI providers for processing.</p>
-                
-                <h3>2. No Image Storage</h3>
-                <p>We do not store your original or transformed images on our servers. After processing, the images showing you in different clothing are returned to your device where they are saved locally if you choose to do so.</p>
-                
-                <h3>3. Third-Party AI Processing</h3>
-                <p>Your images are processed by our AI provider partners to generate the virtual try-on effect. While these providers process your images, they do not store them after processing is complete.</p>
-                
-                <h3>4. Content Moderation</h3>
-                <p>Some images may be rejected for processing if they are deemed inappropriate or violate our acceptable use guidelines. This moderation helps ensure the service is used appropriately.</p>
-                
-                <h3>5. User Responsibility</h3>
-                <p>You are responsible for the content of the images you upload. We recommend not uploading sensitive images or images that you would not want processed by third-party AI systems.</p>
-                
-                <h3>6. Local Storage</h3>
-                <p>All transformed images are returned to and stored locally on your device. We do not maintain any copies of your images on our servers. Any saving or sharing of these images is managed entirely by you on your device.</p>
-                
-                <h3>7. Payment Processing</h3>
-                <p>Try On AI is available on iOS devices. All payments and subscriptions are processed through the Apple App Store. We do not collect, process, or store your payment information. Subscription management, including cancellations and refunds, must be done through your Apple App Store account settings.</p>
-                
-                <h3>8. No Account Creation</h3>
-                <p>Try On AI does not require you to create an account. All app data is stored locally on your device. If you wish to stop using the service, you can simply delete the app from your device. No additional termination process is required as we do not maintain user accounts or store your data on our servers.</p>
-            </div>
+
             
             <!-- Ace SAT Privacy -->
             <div class="privacy-section" id="acesat-privacy">
                 <h2>Ace SAT - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Local Data Processing</h3>
                 <p>Ace SAT is a basic application that operates primarily on your device. All core educational data, including your answers to questions and progress tracking, is stored locally on your device.</p>
                 
                 <h3>2. Usage Data Collection</h3>
-                <p>We collect anonymous usage data to help improve your experience with the app. This includes tracking how you interact with features and content to help us understand what's most valuable and identify areas for improvement. Your personal information is never linked to this usage data, and we do not track sensitive information like your specific answers to test questions.</p>
+                <p>We collect anonymous usage data through Mixpanel analytics to help improve your experience with the app. This includes tracking how you interact with features and content to help us understand what's most valuable and identify areas for improvement. Your personal information is never linked to this usage data, and we do not track sensitive information like your specific answers to test questions.</p>
                 
                 <h3>3. Score Prediction</h3>
                 <p>The app includes a score prediction feature that uses a standard algorithm (not AI) to estimate potential SAT scores based on your performance within the app. This calculation happens entirely on your device without external processing.</p>
@@ -626,13 +487,13 @@
             <!-- Ace ACT Privacy -->
             <div class="privacy-section" id="aceact-privacy">
                 <h2>Ace ACT - Privacy Policy</h2>
-                <p>Last Updated: March 15, 2025</p>
+                <p>Last Updated: April 15, 2025</p>
                 
                 <h3>1. Local Data Processing</h3>
                 <p>Ace ACT is a basic application that operates primarily on your device. All core educational data, including your answers to questions and progress tracking, is stored locally on your device.</p>
                 
                 <h3>2. Usage Data Collection</h3>
-                <p>We collect anonymous usage data to help improve your experience with the app. This includes tracking how you interact with features and content to help us understand what's most valuable and identify areas for improvement. Your personal information is never linked to this usage data, and we do not track sensitive information like your specific answers to test questions.</p>
+                <p>We collect anonymous usage data through Mixpanel analytics to help improve your experience with the app. This includes tracking how you interact with features and content to help us understand what's most valuable and identify areas for improvement. Your personal information is never linked to this usage data, and we do not track sensitive information like your specific answers to test questions.</p>
                 
                 <h3>3. Score Prediction</h3>
                 <p>The app includes a score prediction feature that uses a standard algorithm (not AI) to estimate potential ACT scores based on your performance within the app. This calculation happens entirely on your device without external processing.</p>
@@ -652,6 +513,68 @@
                 
                 <h3>7. No Account Creation</h3>
                 <p>Ace ACT does not require you to create an account. All app data is stored locally on your device. If you wish to stop using the service, you can simply delete the app from your device. No additional termination process is required as we do not maintain user accounts or store your data on our servers.</p>
+            </div>
+            
+            <!-- Ace PSAT Privacy -->
+            <div class="privacy-section" id="acepsat-privacy">
+                <h2>Ace PSAT - Privacy Policy</h2>
+                <p>Last Updated: April 15, 2025</p>
+                
+                <h3>1. Local Data Processing</h3>
+                <p>Ace PSAT is a basic application that operates primarily on your device. All core educational data, including your answers to questions and progress tracking, is stored locally on your device.</p>
+                
+                <h3>2. Usage Data Collection</h3>
+                <p>We collect anonymous usage data through Mixpanel analytics to help improve your experience with the app. This includes tracking how you interact with features and content to help us understand what's most valuable and identify areas for improvement. Your personal information is never linked to this usage data, and we do not track sensitive information like your specific answers to test questions.</p>
+                
+                <h3>3. Score Prediction</h3>
+                <p>The app includes a score prediction feature that uses a standard algorithm (not AI) to estimate potential PSAT scores based on your performance within the app. This calculation happens entirely on your device without external processing.</p>
+                
+                <h3>4. Third-Party Services</h3>
+                <p>The app may use basic third-party services provided by your device's operating system or app store for functions like app installation and updates. These interactions are subject to the privacy policies of those platform providers but do not involve sharing your educational data.</p>
+                
+                <h3>5. Data Control</h3>
+                <p>Since all your educational data is stored locally on your device, you can delete this information by either clearing the app's data through your device settings or by uninstalling the application.</p>
+                
+                <h3>6. Payment Processing</h3>
+                <p>Ace PSAT is available on both iOS and Android devices:</p>
+                <ul>
+                    <li>For iOS users: All payments and subscriptions are processed through the Apple App Store. We do not collect, process, or store your payment information. Subscription management, including cancellations and refunds, must be done through your Apple App Store account settings.</li>
+                    <li>For Android users: All payments and subscriptions are processed through the Google Play Store. We do not collect, process, or store your payment information. Subscription management, including cancellations and refunds, must be done through your Google Play Store account settings.</li>
+                </ul>
+                
+                <h3>7. No Account Creation</h3>
+                <p>Ace PSAT does not require you to create an account. All app data is stored locally on your device. If you wish to stop using the service, you can simply delete the app from your device. No additional termination process is required as we do not maintain user accounts or store your data on our servers.</p>
+            </div>
+            
+            <!-- Ace PreACT Privacy -->
+            <div class="privacy-section" id="acepreact-privacy">
+                <h2>Ace PreACT - Privacy Policy</h2>
+                <p>Last Updated: April 15, 2025</p>
+                
+                <h3>1. Local Data Processing</h3>
+                <p>Ace PreACT is a basic application that operates primarily on your device. All core educational data, including your answers to questions and progress tracking, is stored locally on your device.</p>
+                
+                <h3>2. Usage Data Collection</h3>
+                <p>We collect anonymous usage data through Mixpanel analytics to help improve your experience with the app. This includes tracking how you interact with features and content to help us understand what's most valuable and identify areas for improvement. Your personal information is never linked to this usage data, and we do not track sensitive information like your specific answers to test questions.</p>
+                
+                <h3>3. Score Prediction</h3>
+                <p>The app includes a score prediction feature that uses a standard algorithm (not AI) to estimate potential PreACT scores based on your performance within the app. This calculation happens entirely on your device without external processing.</p>
+                
+                <h3>4. Third-Party Services</h3>
+                <p>The app may use basic third-party services provided by your device's operating system or app store for functions like app installation and updates. These interactions are subject to the privacy policies of those platform providers but do not involve sharing your educational data.</p>
+                
+                <h3>5. Data Control</h3>
+                <p>Since all your educational data is stored locally on your device, you can delete this information by either clearing the app's data through your device settings or by uninstalling the application.</p>
+                
+                <h3>6. Payment Processing</h3>
+                <p>Ace PreACT is available on both iOS and Android devices:</p>
+                <ul>
+                    <li>For iOS users: All payments and subscriptions are processed through the Apple App Store. We do not collect, process, or store your payment information. Subscription management, including cancellations and refunds, must be done through your Apple App Store account settings.</li>
+                    <li>For Android users: All payments and subscriptions are processed through the Google Play Store. We do not collect, process, or store your payment information. Subscription management, including cancellations and refunds, must be done through your Google Play Store account settings.</li>
+                </ul>
+                
+                <h3>7. No Account Creation</h3>
+                <p>Ace PreACT does not require you to create an account. All app data is stored locally on your device. If you wish to stop using the service, you can simply delete the app from your device. No additional termination process is required as we do not maintain user accounts or store your data on our servers.</p>
             </div>
             
             <!-- Additional app-specific privacy policies would go here -->
@@ -750,7 +673,7 @@
                     <ul>
                         <li><a href="mailto:hello@athenlabs.com?subject=Contact%20Inquiry">Contact</a></li>
                         <li><a href="mailto:hello@athenlabs.com?subject=Career%20Inquiry">Careers</a></li>
-                        <li><a href="mailto:hello@athenlabs.com?subject=Support%20Request">Support</a></li>
+                        <li><a href="../support">Support</a></li>
                         <li><a href="../terms/">Terms</a></li>
                         <li><a href="index.html">Privacy</a></li>
                     </ul>
