@@ -14,7 +14,8 @@ const appMap = {
     'photomagic': 'photomagic',
     'tryon': 'tryon',
     'acesat': 'acesat',
-    'aceact': 'aceact'
+    'aceact': 'aceact',
+    'faithful':   'faithful'
 };
 
 // Function to redirect based on app name

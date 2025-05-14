@@ -16,6 +16,7 @@ RewriteRule ^PhotoMagic$ index.html?app=photomagic [L,R=302]
 RewriteRule ^TryOn$ index.html?app=tryon [L,R=302]
 RewriteRule ^AceSAT$ index.html?app=acesat [L,R=302]
 RewriteRule ^AceACT$ index.html?app=aceact [L,R=302]
+RewriteRule ^Faithful$  index.html?app=faithful  [L,R=302]
 
 # Case insensitive versions
 RewriteRule ^model$ index.html?app=audit-model [L,R=302]
@@ -33,10 +34,11 @@ RewriteRule ^photomagic$ index.html?app=photomagic [L,R=302]
 RewriteRule ^tryon$ index.html?app=tryon [L,R=302]
 RewriteRule ^acesat$ index.html?app=acesat [L,R=302]
 RewriteRule ^aceact$ index.html?app=aceact [L,R=302]
+RewriteRule ^faithful$  index.html?app=faithful  [L,R=302]
 
 # If the request is for a non-existent file or directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # And if it matches one of our app names
-RewriteRule ^(Model|Deck|Document|Excel|PowerPoint|Word|LinkedIn|Indeed|Handshake|Hirevue|QuickNote|PhotoMagic|TryOn|AceSAT|AceACT)$ $1.html [L] 
+RewriteRule ^(Model|Deck|Document|Excel|PowerPoint|Word|LinkedIn|Indeed|Handshake|Hirevue|QuickNote|PhotoMagic|TryOn|AceSAT|AceACT|Faithful)$ $1.html [L] 

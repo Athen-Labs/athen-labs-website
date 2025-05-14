@@ -198,6 +198,7 @@
                         <button class="app-btn" data-app="photomagic">Photo Magic AI</button>
                         <button class="app-btn" data-app="tryon">Try On AI</button>
                         <button class="app-btn" data-app="acesat">Ace SAT</button>
+                        <button class="app-btn" data-app="faithful">Faithful</button>
                     </div>
                 </div>
                 
@@ -560,77 +561,73 @@
     <!-- JavaScript for tab switching -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const appButtons = document.querySelectorAll('.app-btn');
+            const appButtons = document.querySelectorAll('.app-selector .app-btn');
             const termsSections = document.querySelectorAll('.terms-section');
-            
-            // Set initial active state for the default button
-            document.querySelector('.app-btn[data-app="general"]').classList.add('active');
-            document.getElementById('general-terms').classList.add('active');
-            
-            appButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    appButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Hide all terms sections
-                    termsSections.forEach(section => section.classList.remove('active'));
-                    
-                    // Show selected terms section
-                    const app = this.getAttribute('data-app');
-                    let sectionId;
-                    
-                    switch(app) {
-                        case 'general':
-                            sectionId = 'general-terms';
-                            break;
-                        case 'audit-model':
-                            sectionId = 'audit-model-terms';
-                            break;
-                        case 'audit-deck':
-                            sectionId = 'audit-deck-terms';
-                            break;
-                        case 'audit-document':
-                            sectionId = 'audit-document-terms';
-                            break;
-                        case 'excel':
-                            sectionId = 'excel-terms';
-                            break;
-                        case 'powerpoint':
-                            sectionId = 'powerpoint-terms';
-                            break;
-                        case 'word':
-                            sectionId = 'word-terms';
-                            break;
-                        case 'linkedin':
-                            sectionId = 'linkedin-terms';
-                            break;
-                        case 'indeed':
-                            sectionId = 'indeed-terms';
-                            break;
-                        case 'handshake':
-                            sectionId = 'handshake-terms';
-                            break;
-                        case 'hirevue':
-                            sectionId = 'hirevue-terms';
-                            break;
-                        case 'quicknote':
-                            sectionId = 'quicknote-terms';
-                            break;
-                        case 'photomagic':
-                            sectionId = 'photomagic-terms';
-                            break;
-                        case 'tryon':
-                            sectionId = 'tryon-terms';
-                            break;
-                        case 'acesat':
-                            sectionId = 'acesat-terms';
-                            break;
+            const defaultApp = 'general'; // Default to 'general' terms
+
+            function showTerms(appId) {
+                // Special handling for Faithful - redirect to external URL
+                if (appId === 'faithful') {
+                    window.location.href = 'https://athenlabs.com/terms/faithful';
+                    return; // Stop further processing for faithful
+                }
+
+                // Update active button
+                appButtons.forEach(button => {
+                    button.classList.remove('active');
+                    if (button.dataset.app === appId) {
+                        button.classList.add('active');
                     }
+                });
+
+                // Hide all terms sections
+                termsSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Show selected section
+                // Ensure a valid section ID is constructed, default to general if not found
+                const sectionId = `${appId}-terms`;
+                const sectionToShow = document.getElementById(sectionId);
+                if (sectionToShow) {
+                    sectionToShow.classList.add('active');
+                } else {
+                    // Fallback to general if specific section not found
+                    document.getElementById('general-terms').classList.add('active');
+                    // Also update button for general
+                     appButtons.forEach(button => {
+                        button.classList.remove('active');
+                        if (button.dataset.app === 'general') {
+                            button.classList.add('active');
+                        }
+                    });
+                }
+            }
+
+            // Check for URL parameters on page load
+            const urlParams = new URLSearchParams(window.location.search);
+            const appFromUrl = urlParams.get('app');
+
+            if (appFromUrl === 'faithful') {
+                window.location.href = 'https://athenlabs.com/terms/faithful';
+            } else if (appFromUrl) {
+                showTerms(appFromUrl);
+            } else {
+                // No app in URL, show default (general)
+                showTerms(defaultApp);
+            }
+
+            // Add click listeners to buttons
+            appButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const appId = button.dataset.app;
                     
-                    document.getElementById(sectionId).classList.add('active');
+                    // Update URL without reloading for non-Faithful apps
+                    if (appId !== 'faithful') {
+                         history.pushState(null, '', `?app=${appId}`);
+                    }
+                    // Show terms (will handle redirect for Faithful)
+                    showTerms(appId);
                 });
             });
         });
