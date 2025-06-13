@@ -198,6 +198,7 @@
                         <button class="app-btn" data-app="acesat">Ace SAT</button>
                         <button class="app-btn" data-app="aceact">Ace ACT</button>
                         <button class="app-btn" data-app="handshake">Quick Cover Letter for Handshake</button>
+                        <button class="app-btn" data-app="longr">LONGR</button>
                         <button class="app-btn" data-app="faithful">Faithful</button>
                     </div>
                 </div>
@@ -622,6 +623,33 @@
                 <p>For questions regarding these terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Quick%20Cover%20Letter%20Support">hello@athenlabs.com</a>.</p>
             </div>
 
+            <!-- LONGR Terms -->
+            <div class="terms-section" id="longr-terms">
+                <h2>LONGR - User Terms of Service</h2>
+                <p>Last Updated: April 15, 2025</p>
+
+                <h3>1. App Description</h3>
+                <p>LONGR offers a 12-week audio curriculum focused on breathwork, pelvic-floor exercises, and mindset techniques. The content is educational and not medical advice.</p>
+
+                <h3>2. Usage</h3>
+                <p>You may use the training materials for your personal, non-commercial purposes only. Do not redistribute the audio or text without permission.</p>
+
+                <h3>3. Subscriptions</h3>
+                <p>Subscriptions are billed through the Apple App Store and renew automatically unless canceled in your Apple account settings before the end of the current term.</p>
+
+                <h3>4. Health Disclaimer</h3>
+                <p>Consult a healthcare professional before beginning any new exercise routine. The app is not a substitute for professional medical advice.</p>
+
+                <h3>5. Termination</h3>
+                <p>You may stop using LONGR at any time by deleting the app. We may terminate access if you violate these Terms.</p>
+
+                <h3>6. Changes to Terms</h3>
+                <p>We may modify these Terms periodically. Continued use after updates signifies your acceptance of the revised Terms.</p>
+
+                <h3>7. Contact Us</h3>
+                <p>For questions about these Terms, email <a href="mailto:hello@athenlabs.com?subject=LONGR%20Terms">hello@athenlabs.com</a>.</p>
+            </div>
+
             <!-- Faithful Terms -->
             <div class="terms-section" id="faithful-terms">
                 <h2>Faithful - User Terms of Service</h2>
@@ -789,6 +817,9 @@
                         case 'aceact':
                             sectionId = 'aceact-terms';
                             break;
+                        case 'longr':
+                            sectionId = 'longr-terms';
+                            break;
                         case 'acepsat':
                             sectionId = 'acepsat-terms';
                             break;
@@ -858,6 +889,9 @@
                         break;
                     case 'aceact':
                         sectionId = 'aceact-terms';
+                        break;
+                    case 'longr':
+                        sectionId = 'longr-terms';
                         break;
                     case 'acepsat':
                         sectionId = 'acepsat-terms';
