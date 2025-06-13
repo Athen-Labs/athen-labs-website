@@ -39,6 +39,7 @@ create_redirect "photomagic" "Photo Magic AI"
 create_redirect "tryon" "Try On AI"
 create_redirect "acesat" "Ace SAT"
 create_redirect "aceact" "Ace ACT"
+create_redirect "longr" "LONGR"
 
 # Job Search Agents
 create_redirect "linkedin" "Quick Cover Letter (LinkedIn)"
