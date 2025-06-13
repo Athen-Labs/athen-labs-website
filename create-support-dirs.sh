@@ -42,6 +42,7 @@ create_dir "photomagic" "photomagic" "Photo Magic AI"
 create_dir "tryon" "tryon" "Try On AI"
 create_dir "acesat" "acesat" "Ace SAT"
 create_dir "aceact" "aceact" "Ace ACT"
+create_dir "longr" "longr" "LONGR"
 
 # Job Search Agents
 create_dir "linkedin" "linkedin" "Quick Cover Letter (LinkedIn)"
