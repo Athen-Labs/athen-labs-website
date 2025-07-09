@@ -200,6 +200,7 @@
                         <button class="app-btn" data-app="handshake">Quick Cover Letter for Handshake</button>
                         <button class="app-btn" data-app="longr">LONGR</button>
                         <button class="app-btn" data-app="faithful">Faithful</button>
+                        <button class="app-btn" data-app="twin">Twin</button>
                     </div>
                 </div>
             </div>
@@ -709,6 +710,33 @@
                 <p>If you have any questions about these Terms, please contact us at <a href="mailto:hello@athenlabs.com?subject=Faithful%20Terms%20of%20Service%20Inquiry">hello@athenlabs.com</a>.</p>
             </div>
 
+            <!-- Twin Terms -->
+            <div class="terms-section" id="twin-terms">
+                <h2>TWIN - User Terms of Service</h2>
+                <p>Last Updated: June 12, 2025</p>
+
+                <h3>1. App Description</h3>
+                <p>TWIN is a dating app where each user operates an AI "twin" trained on their real personality and non‑negotiables. The AI twin autonomously converses, schedules dates, and pre-screens matches. You may watch in Spectator Mode and take over once mutual interest is confirmed.</p>
+
+                <h3>2. Profiles and Data</h3>
+                <p>Your photo and extracted attributes—age, race, body type, height, and facial attractiveness—are processed to create your AI twin. Only an AI-edited profile image is visible to other users. Conversation transcripts and scheduling details are stored to manage matches and your trust score.</p>
+
+                <h3>3. Rounds of Interaction</h3>
+                <p>Match progression occurs in three rounds: AI texting, an AI-arranged coffee date, and an AI-arranged dinner date. You may withdraw at any time. Connections expire if neither party responds or after the third round without a decision.</p>
+
+                <h3>4. Trust Score and Voice Chat</h3>
+                <p>Unresponsiveness or poor voice call performance lowers your trust score. You can request a direct voice chat at any time; once both parties agree, you may talk directly. Voice messages expire once heard.</p>
+
+                <h3>5. Subscription Terms</h3>
+                <p>The free tier includes one audio chat per week. A subscription of $3.99 per week grants unlimited audio chats, more matches, and twin customization.</p>
+
+                <h3>6. Termination</h3>
+                <p>You may stop using TWIN at any time. We may terminate accounts that violate these Terms or engage in abusive behavior.</p>
+
+                <h3>7. Contact Us</h3>
+                <p>For questions regarding TWIN, email <a href="mailto:hello@athenlabs.com?subject=TWIN%20Support">hello@athenlabs.com</a>.</p>
+            </div>
+
         </div>
     </section>
 
@@ -826,9 +854,12 @@
                         case 'acepreact':
                             sectionId = 'acepreact-terms';
                             break;
-                        case 'faithful': 
-                            sectionId = 'faithful-terms'; 
-                            break;       
+                        case 'faithful':
+                            sectionId = 'faithful-terms';
+                            break;
+                        case 'twin':
+                            sectionId = 'twin-terms';
+                            break;
                     }
                     
                     document.getElementById(sectionId).classList.add('active');
@@ -899,9 +930,12 @@
                     case 'acepreact':
                         sectionId = 'acepreact-terms';
                         break;
-                    case 'faithful': 
-                        sectionId = 'faithful-terms'; 
-                        break;       
+                    case 'faithful':
+                        sectionId = 'faithful-terms';
+                        break;
+                    case 'twin':
+                        sectionId = 'twin-terms';
+                        break;
                 }
                 
                 document.getElementById(sectionId).classList.add('active');
