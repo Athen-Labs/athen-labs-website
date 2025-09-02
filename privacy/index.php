@@ -8,15 +8,8 @@ $lastPart = end($parts);
 
 // If this is a direct access to an app, redirect accordingly
 $appMapping = [
-    'Model' => 'audit-model',
-    'Deck' => 'audit-deck',
-    'Document' => 'audit-document',
-    'Excel' => 'excel',
-    'PowerPoint' => 'powerpoint',
-    'Word' => 'word',
     'LinkedIn' => 'linkedin',
     'Indeed' => 'indeed',
-    'Handshake' => 'handshake',
     'Hirevue' => 'hirevue',
     'QuickNote' => 'quicknote',
     'PhotoMagic' => 'photomagic',

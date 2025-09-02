@@ -132,26 +132,12 @@
             <p>Please select an application to view its privacy policy.</p>
             
             <div class="app-categories">
-                <!-- Knowledge Worker Agents -->
-                <div class="app-category">
-                    <h3>Knowledge Worker Agents</h3>
-                    <div class="app-selector">
-                        <button class="app-btn" data-app="audit-model">Audit My Model</button>
-                        <button class="app-btn" data-app="audit-deck">Audit My Deck</button>
-                        <button class="app-btn" data-app="audit-document">Audit My Document</button>
-                        <button class="app-btn" data-app="excel">Genie For Excel</button>
-                        <button class="app-btn" data-app="powerpoint">Genie For PowerPoint</button>
-                        <button class="app-btn" data-app="word">Genie For Word</button>
-                    </div>
-                </div>
-                
                 <!-- Job Search Agents -->
                 <div class="app-category">
                     <h3>Job Search Agents</h3>
                     <div class="app-selector">
                         <button class="app-btn" data-app="linkedin">Quick Cover Letter (LinkedIn)</button>
                         <button class="app-btn" data-app="indeed">Quick Cover Letter (Indeed)</button>
-                        <button class="app-btn" data-app="handshake">Quick Cover Letter (Handshake)</button>
                         <button class="app-btn" data-app="hirevue">Hirevue AI</button>
                     </div>
                 </div>
@@ -216,17 +202,9 @@
             const appButtons = document.querySelectorAll('.app-selector .app-btn');
 
             const privacyPolicyRedirects = {
-                // Knowledge Worker Agents
-                'audit-model': 'Model/', // Relative to privacy/
-                'audit-deck': 'Deck/',
-                'audit-document': 'Document/',
-                'excel': 'Excel/',
-                'powerpoint': 'PowerPoint/',
-                'word': 'Word/',
                 // Job Search Agents
                 'linkedin': 'LinkedIn/',
                 'indeed': 'Indeed/',
-                'handshake': 'Handshake/',
                 'hirevue': 'Hirevue/',
                 // Consumer Apps
                 'quicknote': 'QuickNote/',
