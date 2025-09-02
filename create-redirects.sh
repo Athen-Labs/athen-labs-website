@@ -25,27 +25,11 @@ EOL
     echo "Created ${product}.html"
 }
 
-# Knowledge Worker Agents
-create_redirect "audit-model" "Audit My Model"
-create_redirect "audit-deck" "Audit My Deck"
-create_redirect "audit-document" "Audit My Document"
-create_redirect "excel" "Genie For Excel"
-create_redirect "powerpoint" "Genie For PowerPoint"
-create_redirect "word" "Genie For Word"
-
-# Consumer Apps
+# Customer Support Products
 create_redirect "quicknote" "Quick Note AI"
-create_redirect "photomagic" "Photo Magic AI"
-create_redirect "tryon" "Try On AI"
 create_redirect "ace" "Ace My Classes"
 create_redirect "acesat" "Ace SAT"
 create_redirect "aceact" "Ace ACT"
-create_redirect "longr" "LONGR"
+create_redirect "faithful" "Faithful"
 
-# Job Search Agents
-create_redirect "linkedin" "Quick Cover Letter (LinkedIn)"
-create_redirect "indeed" "Quick Cover Letter (Indeed)"
-create_redirect "handshake" "Quick Cover Letter (Handshake)"
-create_redirect "hirevue" "Hirevue AI"
-
-echo "All redirect files created successfully!"
+echo "Selected redirect files created successfully!"

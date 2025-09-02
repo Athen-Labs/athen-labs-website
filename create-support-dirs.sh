@@ -28,27 +28,11 @@ EOL
     echo "Created directory $dir for $title"
 }
 
-# Knowledge Worker Agents
-create_dir "model" "audit-model" "Audit My Model"
-create_dir "deck" "audit-deck" "Audit My Deck"
-create_dir "document" "audit-document" "Audit My Document"
-create_dir "excel" "excel" "Genie For Excel"
-create_dir "powerpoint" "powerpoint" "Genie For PowerPoint"
-create_dir "word" "word" "Genie For Word"
-
-# Consumer Apps
+# Customer Support Products
 create_dir "quicknote" "quicknote" "Quick Note AI"
-create_dir "photomagic" "photomagic" "Photo Magic AI"
-create_dir "tryon" "tryon" "Try On AI"
 create_dir "ace" "ace" "Ace My Classes"
 create_dir "acesat" "acesat" "Ace SAT"
 create_dir "aceact" "aceact" "Ace ACT"
-create_dir "longr" "longr" "LONGR"
+create_dir "faithful" "faithful" "Faithful"
 
-# Job Search Agents
-create_dir "linkedin" "linkedin" "Quick Cover Letter (LinkedIn)"
-create_dir "indeed" "indeed" "Quick Cover Letter (Indeed)"
-create_dir "handshake" "handshake" "Quick Cover Letter (Handshake)"
-create_dir "hirevue" "hirevue" "Hirevue AI"
-
-echo "All support directories created successfully!"
+echo "Selected support directories created successfully!"

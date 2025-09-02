@@ -243,21 +243,11 @@
                         <label for="product">Product</label>
                         <select id="product" name="product" required class="form-control">
                             <option value="">Select a product</option>
-                            <option value="Audit My Model">Audit My Model</option>
-                            <option value="Audit My Deck">Audit My Deck</option>
-                            <option value="Audit My Document">Audit My Document</option>
-                            <option value="Genie For Excel">Genie For Excel</option>
-                            <option value="Genie For PowerPoint">Genie For PowerPoint</option>
-                            <option value="Genie For Word">Genie For Word</option>
                             <option value="Quick Note AI">Quick Note AI</option>
                             <option value="Ace My Classes">Ace My Classes</option>
                             <option value="Ace SAT">Ace SAT</option>
                             <option value="Ace ACT">Ace ACT</option>
-                            <option value="Ace PSAT">Ace PSAT</option>
-                            <option value="Ace PreACT">Ace PreACT</option>
                             <option value="Faithful">Faithful</option>
-                            <option value="LONGR">LONGR</option>
-                            <option value="Quick Cover Letter for Handshake">Quick Cover Letter for Handshake</option>
                         </select>
                     </div>
                     
@@ -310,23 +300,11 @@
     <script>
         // Product mapping for URL parameters
         const productMapping = {
-            'model': 'Audit My Model',
-            'deck': 'Audit My Deck',
-            'document': 'Audit My Document',
-            'excel': 'Genie For Excel',
-            'powerpoint': 'Genie For PowerPoint',
-            'word': 'Genie For Word',
             'quicknote': 'Quick Note AI',
             'ace': 'Ace My Classes',
-            'photomagic': 'Photo Magic AI',
-            'tryon': 'Try On AI',
             'acesat': 'Ace SAT',
             'aceact': 'Ace ACT',
-            'linkedin': 'Quick Cover Letter (LinkedIn)',
-            'indeed': 'Quick Cover Letter (Indeed)',
-            'handshake': 'Quick Cover Letter (Handshake)',
-            'hirevue': 'Hirevue AI',
-            'longr': 'LONGR'
+            'faithful': 'Faithful'
         };
         
         // Reverse mapping to get URL key from product name
@@ -337,7 +315,7 @@
 
         // Check URL for product parameter
         function getProductFromUrl() {
-            // First check for URL path segments (like /support/excel/)
+            // First check for URL path segments (like /support/quicknote/)
             const pathSegments = window.location.pathname.split('/');
             // Find the product key in the path
             for (let i = 0; i < pathSegments.length; i++) {
@@ -347,7 +325,7 @@
                 }
             }
             
-            // Then check for query parameter (e.g., /support/?app=excel)
+            // Then check for query parameter (e.g., /support/?app=quicknote)
             const urlParams = new URLSearchParams(window.location.search);
             const appParam = urlParams.get('app');
             if (appParam && productMapping[appParam]) {
