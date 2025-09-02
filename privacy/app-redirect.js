@@ -1,14 +1,7 @@
 // Map of app names to their parameter values
 const appMap = {
-    'model': 'audit-model',
-    'deck': 'audit-deck',
-    'document': 'audit-document',
-    'excel': 'excel',
-    'powerpoint': 'powerpoint',
-    'word': 'word',
     'linkedin': 'linkedin',
     'indeed': 'indeed',
-    'handshake': 'handshake',
     'hirevue': 'hirevue',
     'quicknote': 'quicknote',
     'photomagic': 'photomagic',
