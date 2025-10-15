@@ -182,6 +182,7 @@
                         <button class="app-btn" data-app="ace">Ace My Classes</button>
                         <button class="app-btn" data-app="acesat">Ace SAT</button>
                         <button class="app-btn" data-app="aceact">Ace ACT</button>
+                        <button class="app-btn" data-app="bedrot">Bedrot</button>
                         <button class="app-btn" data-app="longr">LONGR</button>
                         <button class="app-btn" data-app="faithful">Faithful</button>
                     </div>
@@ -417,6 +418,49 @@
                 <p>For support with Ace ACT, please contact <a href="mailto:hello@athenlabs.com?subject=Ace%20ACT%20Support">hello@athenlabs.com</a>.</p>
             </div>
 
+            <!-- Bedrot Terms -->
+            <div class="terms-section" id="bedrot-terms">
+                <h2>Bedrot - Terms of Service</h2>
+                <p>Last Updated: September 27, 2025</p>
+
+                <h3>1. What Bedrot Does</h3>
+                <p>Bedrot is a mobile app that schedules wake-up alarms, tracks when you snooze, and helps you build healthier sleep habits. The service needs AlarmKit access on your device and a reliable internet connection to sync alarm schedules, snooze metrics, and billing updates.</p>
+
+                <h3>2. Your Account and Access</h3>
+                <ul>
+                    <li>You can sign in with your email or Sign in with Apple. Each account is linked to a secure customer profile in our billing system.</li>
+                    <li>Keep your contact details accurate and make sure AlarmKit permissions stay enabled so alarms can trigger properly.</li>
+                    <li>Authentication tokens are issued to protect your account. Do not share your login credentials.</li>
+                </ul>
+
+                <h3>3. Billing and Payments</h3>
+                <ul>
+                    <li>Bedrot supports both App Store in-app purchases and direct billing through Stripe.</li>
+                    <li>Depending on your plan, we may calculate usage-based charges for extra snoozes. You will see credits, invoices, and checkout options directly in the app.</li>
+                    <li>You are responsible for any outstanding balances. Contact us if you need help with refunds or billing disputes.</li>
+                </ul>
+
+                <h3>4. Using Bedrot Responsibly</h3>
+                <ul>
+                    <li>Set truthful alarm schedules and do not tamper with snooze tracking or billing safeguards.</li>
+                    <li>Only use Bedrot on devices you own or control, and do not attempt to access another user’s account.</li>
+                    <li>You are responsible for maintaining device health (battery, network access, do-not-disturb settings) that could affect alarm delivery.</li>
+                </ul>
+
+                <h3>5. Service Limitations</h3>
+                <p>We work hard to deliver reliable alarms, but we cannot guarantee Bedrot will work in every situation. Missed alarms can happen if AlarmKit permissions are revoked, the device is powered off, or connectivity issues prevent schedule updates. Metrics and billing summaries may be delayed if the app cannot reach our servers.</p>
+
+                <h3>6. Ending Your Service</h3>
+                <ul>
+                    <li>You may cancel subscriptions in the App Store or Stripe billing portal at any time. Some plans renew automatically until canceled.</li>
+                    <li>If you close your account, we delete your schedules, snooze history, and billing policies from our systems, subject to any legal retention requirements.</li>
+                    <li>Outstanding charges remain due even after cancellation. Contact support if you need help settling your balance or requesting data deletion.</li>
+                </ul>
+
+                <h3>7. Contact Us</h3>
+                <p>Need assistance with Bedrot? Email <a href="mailto:hello@athenlabs.com?subject=Bedrot%20Terms%20Inquiry">hello@athenlabs.com</a> and our team will respond.</p>
+            </div>
+
             <!-- Ace PSAT Terms -->
             <div class="terms-section" id="acepsat-terms">
                 <h2>Ace PSAT - User Terms of Service</h2>
@@ -635,11 +679,17 @@
                         case 'quicknote':
                             sectionId = 'quicknote-terms';
                             break;
+                        case 'ace':
+                            sectionId = 'ace-terms';
+                            break;
                         case 'acesat':
                             sectionId = 'acesat-terms';
                             break;
                         case 'aceact':
                             sectionId = 'aceact-terms';
+                            break;
+                        case 'bedrot':
+                            sectionId = 'bedrot-terms';
                             break;
                         case 'longr':
                             sectionId = 'longr-terms';
@@ -684,11 +734,17 @@
                     case 'quicknote':
                         sectionId = 'quicknote-terms';
                         break;
+                    case 'ace':
+                        sectionId = 'ace-terms';
+                        break;
                     case 'acesat':
                         sectionId = 'acesat-terms';
                         break;
                     case 'aceact':
                         sectionId = 'aceact-terms';
+                        break;
+                    case 'bedrot':
+                        sectionId = 'bedrot-terms';
                         break;
                     case 'longr':
                         sectionId = 'longr-terms';
