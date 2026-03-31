@@ -47,6 +47,7 @@
         font-weight: 700 !important; /* Bold text */
         border: 1px solid #000000 !important; /* Black border */
     }
+
 }
 
 * {
@@ -289,6 +290,98 @@ nav ul li a.active {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-compact {
+    min-height: 62vh;
+    padding-top: 120px;
+}
+
+.hero-compact .hero-image {
+    margin-bottom: 22px;
+}
+
+.hero-compact .hero-image img {
+    max-width: 140px;
+}
+
+.hero-compact .hero-content {
+    max-width: 760px;
+}
+
+.hero-compact .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+}
+
+.hero-compact .hero-content p {
+    max-width: 700px;
+}
+
+.hero-kicker {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: 18px;
+}
+
+.simple-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.icon-frame {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-accent);
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.metric-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 2px 4px var(--color-card-shadow);
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-text-accent);
+    margin-bottom: 14px;
+    letter-spacing: -0.03em;
+}
+
+.metric-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.section-copy {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.section-copy .hero-buttons {
+    justify-content: center;
+    margin-top: 28px;
 }
 
 /* App Cards Section */
@@ -736,6 +829,19 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-compact {
+        min-height: auto;
+    }
+
+    .hero-compact .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .simple-grid,
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hero-content h1 {
         font-size: 2.75rem;
     }
@@ -804,6 +910,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .hero-compact .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
     .hero {
         min-height: 70vh;
     }
